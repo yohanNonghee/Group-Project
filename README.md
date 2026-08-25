@@ -1,18 +1,18 @@
 # Group-Project
-<!-- Meeting WFH Work From Home -->
+Meeting WFH Work From Home
 # Day 1 Monday 
 - Zoom Meeting ,Join 
-<!-- (Yohan,Elma) -->
+(Yohan,Elma)
 
 # Day 2 Tuesday 
-<!-- -- Every on busy no meeting  -->
+-- Every on busy no meeting 
 
 # Day 3 Wednesday
 
 # Day 4 Thursday
 
 # Day 5 Friday
-<!-- Game Day -->
+Game Day
 
 # Yohan 
 - Project idea
