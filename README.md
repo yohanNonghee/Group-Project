@@ -29,6 +29,7 @@ Game Day
 - Moodboard
 - Wireframing
 - UI Design
+- logo Design
 
 # Sultan
 - Project idea
