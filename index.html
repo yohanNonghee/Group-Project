@@ -7,9 +7,11 @@
     <title>EBY - Essential By Design</title>
     <link rel="stylesheet" href="src/style.css">
     <!-- FontAwesome for Search, User, and Cart icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
- <!-- Top Bar -->
+
+<body>
+    <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-bar-left">
             <i class="fa-solid fa-truck-fast"></i> Free shipping over 10,000 kr.
@@ -18,44 +20,68 @@
             Service phone: 444-4400
         </div>
     </div>
-<body>
-   <!-- Main Header -->
-    <header class="main-header">
 
-        <nav class="nav-left">
-            <a href="#">Clothing</a>
-            <a href="#">Accessories</a>
-            <a href="#">Styles</a>
-            <a href="#">About Us</a>
-        </nav>
+    <!-- Main Header Section -->
+<header class="main-header">
+    <!-- Left Navigation Links -->
+    <nav class="nav-left">
+        <a href="#">Clothing</a>
+        <a href="#">Accessories</a>
+        <a href="#">Styles</a>
+        <a href="#">About Us</a>
+    </nav>
 
-        <div class="logo">
-            <img src="img/ESY.png" alt="ESY-logo">
+    <!-- Center Logo -->
+    <div class="logo">
+        <a href="#">
+            <img src="img/ESY.png" alt="Website Logo">
+        </a>
+    </div>
+
+    <!-- Right Navigation (Search Bar, Wishlist, Cart) -->
+    <div class="nav-right">
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search products..." aria-label="Search">
         </div>
+        
+        <a href="#" class="icon-btn wishlist-icon" aria-label="Wishlist">
+            <i class="far fa-heart"></i>
+        </a>
 
-        <div class="nav-right">
-            <div class="search-container">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search...">
-            </div>
-            <a href="#" class="icon-btn"><i class="fa-regular fa-user"></i></a>
-            <a href="#" class="icon-btn cart-btn">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-count">0</span>
-            </a>
+        <a href="#" class="icon-btn cart-btn" id="cart-icon" aria-label="Open Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+        </a>
+    </div>
+
+    <!-- Slide-out Cart Drawer -->
+<div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+        <h3>Your Shopping Cart</h3>
+        <button class="close-cart-btn" id="close-cart">&times;</button>
+    </div>
+    
+    <div class="cart-items-container" id="cart-items">
+        <p class="empty-cart-msg">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">0 kr</span>
         </div>
-
-    </header>
-
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+</div>
+<div class="cart-overlay" id="cart-overlay"></div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero-section">
-
         <div class="hero-bg">
             <img src="img/jc-gellidon-81fEanp-xXc-unsplash.jpg" alt="Streetwear fashion model" />
         </div>
-
-        <!-- Content Container (Right-aligned text box) -->
         <div class="hero-content">
             <h1>
                 ESSENTIAL BY <br />
@@ -66,14 +92,12 @@
                 Scandinavian minimalism and urban life, our pieces are made to move with you.
             </p>
         </div>
-
     </section>
 
     <!-- Shop By Category Section -->
     <section class="category-section">
         <h2>SHOP BY CATEGORY</h2>
         <div class="category-grid">
-            
             <a href="#" class="category-card">
                 <div class="category-img">
                     <img src="img/jc-gellidon-81fEanp-xXc-unsplash.jpg" alt="Shirts category">
@@ -94,20 +118,16 @@
                 </div>
                 <h3>Accessories</h3>
             </a>
-
         </div>
     </section>
-
-
-<!-- Why Buy From Us Section -->
+    <!-- Why Buy From Us Section -->
     <section class="features-section">
         <div class="features-header">
             <h2>WHY BUY FROM US?</h2>
             <p>Clothing that combines comfort, quality and effortless style.</p>
         </div>
-        
+
         <div class="features-grid">
-            <!-- Feature 1 -->
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fa-solid fa-gem"></i>
@@ -116,7 +136,6 @@
                 <p>Thoughtfully selected pieces made with quality, comfort and longevity in mind.</p>
             </div>
 
-            <!-- Feature 2 -->
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fa-solid fa-shirt"></i>
@@ -125,7 +144,6 @@
                 <p>Easy-to-wear pieces designed to elevate your everyday wardrobe.</p>
             </div>
 
-            <!-- Feature 3 -->
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fa-solid fa-calendar-days"></i>
@@ -134,7 +152,6 @@
                 <p>Comfortable, versatile clothing that fits seamlessly into your lifestyle.</p>
             </div>
 
-            <!-- Feature 4 -->
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fa-solid fa-globe"></i>
@@ -144,70 +161,139 @@
             </div>
         </div>
     </section>
+   <!-- Our Popular Product Section -->
+     <section class="popular-products-section">
+    <div class="container">
+        <h2>Our Popular Product</h2>
 
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="img/jc-gellidon-81fEanp-xXc-unsplash.jpg" alt="Product Name">
+                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <span class="product-price">15,000 kr</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
 
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="img/jc-gellidon-81fEanp-xXc-unsplash.jpg" alt="Product Name">
+                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <span class="product-price">15,000 kr</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
 
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="img/jc-gellidon-81fEanp-xXc-unsplash.jpg" alt="Product Name">
+                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <span class="product-price">15,000 kr</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
 
-</body>
-
-
-<!-- Footer Section -->
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="img/jc-gellidon-81fEanp-xXc-unsplash.jpg" alt="Product Name">
+                    <button class="wishlist-btn" aria-label="Add to wishlist">
+                        <i class="far fa-heart" style="color: pink;"></i>
+                    </button>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <span class="product-price">15,000 kr</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer Section -->
     <footer class="site-footer">
         <div class="footer-container">
-            
-            <!-- Column 1: Brand Info & Socials -->
-            <div class="footer-col footer-brand">
+            <!-- Left Column: Logo, Description, and Social Icons -->
+            <div class="footer-col brand-col">
                 <div class="footer-logo">
                     <img src="img/ESY logo Footter.png" alt="ESY-logo">
                 </div>
-                <p>
-                    ESY creates contemporary everyday essentials designed around simplicity, comfort and function. Inspired by Scandinavian minimalism and urban life, our pieces are made to move with you — wherever the day takes you.
+                <p class="footer-desc">
+                    ESY creates contemporary everyday essentials designed around simplicity, comfort and function.
+                    Inspired by Scandinavian minimalism and urban life, our pieces are made to move with you — wherever
+                    the day takes you.
                 </p>
-                <div class="footer-socials">
-                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram" class="social-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" class="social-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.37 14.5 5 15.5 5H18V0h-3.808C10.59 0 9 1.581 9 4.75V8z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
                 </div>
             </div>
 
-            <!-- Column 2: Vörur -->
+            <!-- Middle Column: Services -->
             <div class="footer-col">
-                <h3>VÖRUR</h3>
-                <ul>
-                    <li><a href="#">Rafþæki</a></li>
-                    <li><a href="#">Heimili</a></li>
-                    <li><a href="#">Fatnaður</a></li>
-                    <li><a href="#">Heilsa & heilsa</a></li>
-                    <li><a href="#">Íþróttavörur</a></li>
+                <h3>SERVICES</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Shipping costs</a></li>
+                    <li><a href="#">Deadline</a></li>
+                    <li><a href="#">Payment methods</a></li>
+                    <li><a href="#">Frequently Asked Questions</a></li>
+                    <li><a href="#">Contact us</a></li>
                 </ul>
             </div>
 
-            <!-- Column 3: Þjónusta -->
+            <!-- Right Column: About Us -->
             <div class="footer-col">
-                <h3>ÞJÓNUSTA</h3>
-                <ul>
-                    <li><a href="#">Sendingarkostnaður</a></li>
-                    <li><a href="#">Skilafrestur</a></li>
-                    <li><a href="#">Greiðslumátar</a></li>
-                    <li><a href="#">Algengar spurningar</a></li>
-                    <li><a href="#">Hafa samband</a></li>
+                <h3>ABOUT US</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Our story</a></li>
+                    <li><a href="#">Environmental policy</a></li>
+                    <li><a href="#">Activities in Iceland</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Security terms</a></li>
                 </ul>
             </div>
-
-            <!-- Column 4: Um okkur -->
-            <div class="footer-col">
-                <h3>UM OKKUR</h3>
-                <ul>
-                    <li><a href="#">Sagan okkar</a></li>
-                    <li><a href="#">Umhverfisstefna</a></li>
-                    <li><a href="#">Starfsemi á Íslandi</a></li>
-                    <li><a href="#">Blogg</a></li>
-                    <li><a href="#">Öryggisskilmálar</a></li>
-                </ul>
-            </div>
-
         </div>
     </footer>
-
+    <!-- backToTopBtn -->
+<button id="backToTopBtn" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+    <script src="src/script.js"></script>
+</body>
 
 </html>
