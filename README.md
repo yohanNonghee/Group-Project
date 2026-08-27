@@ -36,3 +36,32 @@ Game Day
 - logo idea
 - Sketches
 
+# EBY — Streetwear E-Commerce Platform
+
+A contemporary, responsive streetwear e-commerce web application built with clean HTML, CSS styling, and interactive JavaScript functionality.
+
+📌 Features
+Dynamic Navigation Header: Includes brand identity, integrated search input, wishlist action, and dynamic shopping cart counter.
+
+Slide-out Cart Drawer: Interactive slide-out drawer supporting item additions, quantity adjustments, automated price calculations, and item removals.
+
+Hero Banner: Full-width landing section introducing brand messaging and brand aesthetic.
+
+Popular Products Carousel: Interactive horizontal scrolling product showcase with quick add-to-cart actions.
+
+Editorial Catalog Slider: Dynamic image gallery featuring step-through slider controls.
+
+Shop by Category: Visual grid navigation optimized for seamless browsing.
+
+Responsive Layout: Tailored design optimized for desktop and mobile devices.
+
+🛠 Tech Stack
+Structure: HTML5
+
+Styling: CSS (Flexbox & CSS Grid, Custom Variables)
+
+Icons: FontAwesome 7.x
+
+Interactivity: Vanilla JavaScript (DOM Manipulation, State Management)
+
+Version Control: Git & GitHub
